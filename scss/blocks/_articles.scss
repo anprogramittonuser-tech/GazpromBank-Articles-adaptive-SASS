@@ -1,0 +1,31 @@
+.articles {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 32px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: $vp-mobile) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+
+    &:has(.card-news__box:hover) {
+    .card-news__box-read {
+      display: block;
+    }
+  }
+
+    &--size-xl {
+      position: relative;
+      grid-column: 1 / -1;
+    }
+  }
+}
+
